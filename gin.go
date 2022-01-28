@@ -199,6 +199,10 @@ func New() *Engine {
 	return engine
 }
 
+func (e *Engine) ResetTrees() {
+	e.trees = make(methodTrees, 0, 9)
+}
+
 // Default returns an Engine instance with the Logger and Recovery middleware already attached.
 func Default() *Engine {
 	debugPrintWARNINGDefault()
